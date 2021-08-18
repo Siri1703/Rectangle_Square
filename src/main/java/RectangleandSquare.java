@@ -27,6 +27,10 @@ public class RectangleandSquare {
         {
             return side*side;
         }
+        public int squarePerimeter()
+        {
+            return 4*side;
+        }
     }
 
 

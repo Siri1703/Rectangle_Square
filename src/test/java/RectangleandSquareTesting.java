@@ -118,4 +118,29 @@ public class RectangleandSquareTesting {
 
 
     }
+
+    @Nested
+    public  class SquarePerimeterTesting
+    {
+        @Test
+        public void toCalculatePerimeterWhenSideisPositive()
+        {
+            RectangleandSquare.Square obj=new RectangleandSquare.Square(4);
+            int expectedPerimeter=16;
+            int actualPerimeter=obj.squarePerimeter();
+            assertEquals(expectedPerimeter,actualPerimeter);
+
+        }
+
+        @Test
+        public void toCalculatePerimeterWhenSideisNegative()
+        {
+            RectangleandSquare.Square obj=new RectangleandSquare.Square(-4);
+            int expectedPerimeter=-16;
+            int actualPerimeter=obj.squarePerimeter();
+            assertEquals(expectedPerimeter,actualPerimeter);
+
+        }
+
+    }
 }
