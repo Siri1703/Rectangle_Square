@@ -11,7 +11,7 @@ public class RectangleandSquareTesting {
         @Test
         public void toCalculateAreaWhenLengthandBreadtharePositive()
         {
-            RectangleandSquare obj=new RectangleandSquare(4,3);
+            RectangleandSquare.Rectangle obj=new RectangleandSquare.Rectangle(4,3);
             int expectedArea=12;
             int actualArea=obj.rectangleArea();
             assertEquals(expectedArea,actualArea);
@@ -21,7 +21,7 @@ public class RectangleandSquareTesting {
         @Test
         public void toCalculateAreaWhenLengthandBreadtharenegative()
         {
-            RectangleandSquare obj=new RectangleandSquare(-4,-3);
+            RectangleandSquare.Rectangle obj=new RectangleandSquare.Rectangle(-4,-3);
             int expectedArea=12;
             int actualArea=obj.rectangleArea();
             assertEquals(expectedArea,actualArea);
@@ -30,7 +30,7 @@ public class RectangleandSquareTesting {
         @Test
     public void toCalculateAreaWhenLengthispositiveandBreadthisNegative()
     {
-        RectangleandSquare obj=new RectangleandSquare(4,-3);
+        RectangleandSquare.Rectangle obj=new RectangleandSquare.Rectangle(4,-3);
         int expectedArea=-12;
         int actualArea=obj.rectangleArea();
         assertEquals(expectedArea,actualArea);
@@ -40,10 +40,53 @@ public class RectangleandSquareTesting {
         @Test
         public void toCalculateAreaWhenLengthisNegativeandBreadthisPositive()
         {
-            RectangleandSquare obj=new RectangleandSquare(-4,3);
+            RectangleandSquare.Rectangle obj=new RectangleandSquare.Rectangle(-4,3);
             int expectedArea=-12;
             int actualArea=obj.rectangleArea();
             assertEquals(expectedArea,actualArea);
+
+        }
+    }
+
+    @Nested
+    public  class RectanglePerimeterTesting
+    {
+        @Test
+        public void toCalculatePerimeterWhenLengthandBreadtharePositive()
+        {
+            RectangleandSquare.Rectangle obj=new RectangleandSquare.Rectangle(4,3);
+            int expectedPerimeter=14;
+            int actualPerimeter=obj.rectanglePerimeter();
+            assertEquals(expectedPerimeter,actualPerimeter);
+
+        }
+
+        @Test
+        public void toCalculatePerimeterWhenLengthandBreadtharenegative()
+        {
+            RectangleandSquare.Rectangle obj=new RectangleandSquare.Rectangle(-4,-3);
+            int expectedPerimeter=-14;
+            int actualPerimeter=obj.rectanglePerimeter();
+            assertEquals(expectedPerimeter,actualPerimeter);
+
+        }
+        @Test
+        public void toCalculatePerimeterWhenLengthispositiveandBreadthisNegative()
+        {
+            RectangleandSquare.Rectangle obj=new RectangleandSquare.Rectangle(4,-3);
+            int expectedPerimeter=2;
+            int actualPerimeter=obj.rectanglePerimeter();
+            assertEquals(expectedPerimeter,actualPerimeter);
+
+        }
+
+        @Test
+        public void toCalculatePerimeterWhenLengthisNegativeandBreadthisPositive()
+        {
+            RectangleandSquare.Rectangle obj=new RectangleandSquare.Rectangle(-4,3);
+            int expectedPerimeter=-2;
+            int actualPerimeter=obj.rectanglePerimeter();
+            assertEquals(expectedPerimeter,actualPerimeter);
 
         }
     }
