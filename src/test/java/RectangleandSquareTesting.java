@@ -90,4 +90,32 @@ public class RectangleandSquareTesting {
 
         }
     }
+
+    @Nested
+    public  class SquareAreaTesting
+    {
+        @Test
+        public void toCalculateAreaWhenSideisPositive()
+        {
+            RectangleandSquare.Square obj=new RectangleandSquare.Square(4);
+            int expectedArea=16;
+            int actualArea=obj.squareArea();
+            assertEquals(expectedArea,actualArea);
+
+        }
+
+        @Test
+        public void toCalculateAreaWhenSideisNegative()
+        {
+            RectangleandSquare.Square obj=new RectangleandSquare.Square(-4);
+            int expectedArea=16;
+            int actualArea=obj.squareArea();
+            assertEquals(expectedArea,actualArea);
+
+        }
+
+
+
+
+    }
 }

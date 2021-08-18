@@ -16,5 +16,18 @@ public class RectangleandSquare {
         }
     }
 
+    static class Square
+    {
+        int side;
+        public Square(int s)
+        {
+            this.side=s;
+        }
+        public int squareArea()
+        {
+            return side*side;
+        }
+    }
+
 
 }
